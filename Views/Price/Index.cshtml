@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WebTest.Models.NameService>
+
+<h2>Прайс</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Наименование услуги</th>
+            <th>Описание услуги</th>
+            <th>Время проведения</th>
+            <th>Стоимость</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var service in Model)
+        {
+            <tr>
+                <td>@service.Usl</td>
+                <td>@service.Description</td>
+                <td>@service.Timecomletion</td>
+                <td>@service.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
